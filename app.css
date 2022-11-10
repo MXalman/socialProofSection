@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    min-height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background: var(--White);
+    margin:0.5rem;
+}
+
+main{
+    max-width: 80%;
+}
+
+.top-section{
+    width: 100%;
+    display:flex;
+    margin:3rem 0;
+}
+
+.left-side{
+    width: 50%;
+}
+
+.right-side{
+    width: 50%;
+}
+
+.left-side h1{
+    width:70%;
+    color:var(--Very-Dark-Magenta);
+    font-size:3rem;
+    font-weight:700;
+    margin-bottom:2rem;
+}
+
+.left-side p{
+    width:85%;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--Dark-Grayish-Magenta);
+}
+
+.right-side .review{
+    width: 25rem;
+    height:3rem;
+    background: var(--Light-Grayish-Magenta);
+    display:flex;
+    align-items: center;
+    margin:1.5rem 0;
+    border-radius:0.5rem;
+    padding-left: 1.5rem;
+}
+
+.right-side .review:nth-of-type(1){
+    margin-left:2rem;
+}
+.right-side .review:nth-of-type(2){
+    margin-left:4rem;
+}
+.right-side .review:nth-of-type(3){
+    margin-left:6rem;
+}
+
+.right-side .review h3{
+    font-weight: 700;
+    font-size:1rem;
+    color: var(--Very-Dark-Magenta);
+    margin-left:3rem;
+}
+
+
+.bottom-section{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.bottom-section .testemonial{
+    width:18rem;
+    height:10rem;
+    background:var(--Very-Dark-Magenta);
+    border-radius:0.5rem;
+    padding:1.5rem;
+}
+
+.bottom-section .testemonial .profile-img img{
+    width:2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.testemonial .profile{
+    display:flex;
+    align-items: center;
+    margin-bottom:1rem;
+}
+
+.profile .profile-name{
+    margin-left:1.5rem;
+}
+
+.profile .profile-name h2{
+    color:var(--Light-Grayish-Magenta);
+    font-weight:500;
+    margin-bottom:0.2rem;
+}
+
+.profile .profile-name h3{
+    color:var(--Soft-Pink);
+}
+
+.testemonial p{
+    color:var(--Light-Grayish-Magenta);
+    font-weight:400;
+    line-height:1.5rem;
+    font-size:1rem;
+}
+
+.testemonial:nth-of-type(1){
+    order:1;
+}
+.testemonial:nth-of-type(2){
+    margin-top:1rem;
+    order:2;
+}
+.testemonial:nth-of-type(3){
+    margin-top:2rem;
+    order:3;
+}
+
+@media (max-width: 1290px) {
+    .bottom-section{
+        flex-wrap:wrap;
+      }
+      .testemonial:nth-of-type(3){
+        margin:1rem auto;
+        order: 3;
+      }
+      .testemonial:nth-of-type(2){
+        margin-top:0;
+      }
+}
+
+@media (max-width:1050px) {
+    .right-side .review:nth-of-type(1){
+        margin-left:0;
+    }
+    .right-side .review:nth-of-type(2){
+        margin-left:0;
+    }
+    .right-side .review:nth-of-type(3){
+        margin-left:0;
+    }
+}
+
+@media (max-width:940px) {
+    .bottom-section{
+        flex-direction: column;
+        align-items: center;
+      }
+      .testemonial:nth-of-type(2){
+        margin-top:1rem;
+      }
+}
+
+@media (max-width:900px) {
+    .top-section{
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    .left-side{
+        width: 100%;
+    }
+    
+    .right-side{
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+        width: 100%;
+    }
+
+    .left-side h1{
+        width:100%;
+        text-align: center;
+    }
+    
+    .left-side p{
+        width:100%;
+        text-align: center;
+    }
+    .right-side .review{
+        width: 20rem;
+        justify-content:center;
+        margin:1.5rem 0;
+    }
+    
+    .right-side .review:nth-of-type(1){
+        margin-left:0;
+    }
+    .right-side .review:nth-of-type(2){
+        margin-left:0;
+    }
+    .right-side .review:nth-of-type(3){
+        margin-left:0;
+    }
+    
+    .right-side .review h3{
+        font-weight: 700;
+        font-size:0.8rem;
+        color: var(--Very-Dark-Magenta);
+        margin-left:3rem;
+    }
+}
+
+@media (max-width:400px) {
+    .bottom-section .testemonial{
+        width: 85%;
+        justify-content:center;
+    }
+    .right-side .review{
+        width: 100%;
+        flex-direction:column;
+        padding-left: 0;
+    }
+
+    .right-side .review h3{
+        font-weight: 700;
+        font-size:0.8rem;
+        color: var(--Very-Dark-Magenta);
+        margin-left: 0;
+    }
+}
